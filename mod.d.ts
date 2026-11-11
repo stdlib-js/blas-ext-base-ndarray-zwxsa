@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,17 +16,12 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var reinterpret = require( '@stdlib/strided-base-reinterpret-complex128' );
-var serialize = require( '@stdlib/ndarray-base-serialize-meta-data' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var addon = require( './../src/addon.node' );
-
-
-// MAIN //
+import { complex128ndarray, typedndarray } from '@stdlib/types/ndarray';
+import { Complex128 } from '@stdlib/types/complex';
 
 /**
 * Subtracts a scalar constant from each element in an input one-dimensional double-precision complex floating-point ndarray and assigns the results to elements in a one-dimensional double-precision complex floating-point output ndarray.
@@ -39,9 +34,8 @@ var addon = require( './../src/addon.node' );
 *     -   a one-dimensional output ndarray.
 *     -   a zero-dimensional ndarray containing the scalar constant to subtract.
 *
-* @private
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing ndarrays
-* @returns {ndarray} output ndarray
+* @param arrays - array-like object containing ndarrays
+* @returns output ndarray
 *
 * @example
 * var Complex128Vector = require( '@stdlib/ndarray-vector-complex128' );
@@ -57,19 +51,10 @@ var addon = require( './../src/addon.node' );
 *
 * var out = zwxsa( [ x, w, alpha ] );
 * // returns <ndarray>[ <Complex128>[ -7.0, 1.0 ], <Complex128>[ -2.0, -5.0 ] ]
-*
-* var bool = ( out === w );
-* // returns true
 */
-function zwxsa( arrays ) {
-	var alpha = arrays[ 2 ];
-	var x = arrays[ 0 ];
-	var w = arrays[ 1 ];
-	addon( reinterpret( getData( x ), 0 ), serialize( x ), reinterpret( getData( w ), 0 ), serialize( w ), reinterpret( getData( alpha ), 0 ), serialize( alpha ) ); // eslint-disable-line max-len
-	return w;
-}
+declare function zwxsa( arrays: [ complex128ndarray, complex128ndarray, typedndarray<Complex128> ] ): complex128ndarray;
 
 
 // EXPORTS //
 
-module.exports = zwxsa;
+export = zwxsa;
