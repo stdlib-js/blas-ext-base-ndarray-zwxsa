@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-11-11)
+## Unreleased (2026-11-18)
 
 <section class="features">
 
@@ -23,6 +23,7 @@
 
 <details>
 
+-   [`90996fd`](https://github.com/stdlib-js/stdlib/commit/90996fd5c699426ad6db9e061e44c8b458c49876) - **docs:** use dedicated zero-dimensional tensor constructor in `blas/ext/base/ndarray/zwxsa` [(#16686)](https://github.com/stdlib-js/stdlib/pull/16686) _(by Deepanshu-Mehta)_
 -   [`7f13a75`](https://github.com/stdlib-js/stdlib/commit/7f13a756bbe2c18459838b268270799088a93f84) - **feat:** add C implementation for `blas/ext/base/ndarray/zwxsa` [(#15728)](https://github.com/stdlib-js/stdlib/pull/15728) _(by MJ, Athan Reines)_
 -   [`262e4c6`](https://github.com/stdlib-js/stdlib/commit/262e4c6027e39fba8f8a80b6844369e262bb62a4) - **feat:** add `blas/ext/base/ndarray/zwxsa` [(#13682)](https://github.com/stdlib-js/stdlib/pull/13682) _(by Karan Anand, Athan Reines)_
 
@@ -36,9 +37,10 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Deepanshu-Mehta
 -   Karan Anand
 -   MJ
 
